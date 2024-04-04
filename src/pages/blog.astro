@@ -1,0 +1,16 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import PostList from '../components/PostList.astro';
+import Main from '../components/layout/Main.astro';
+import H1 from '../components/typographie/H1.astro';
+import Layout from '../layouts/Layout.astro';
+
+const posts = await getCollection('posts');
+---
+
+<Layout title='Blog'>
+  <Main>
+    <H1 text='blog page' />
+    {posts.map((post: CollectionEntry<'posts'>) => <PostList posts={posts} />)}
+  </Main>
+</Layout>

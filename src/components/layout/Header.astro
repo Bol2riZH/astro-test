@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<header
+  class='flex justify-between items-center px-24 py-12 max-sm:px-5 max-sm:py-10 max-w-7xl justify-self-center w-full'
+>
+  <a href='/' class='flex gap-x-4 items-center'>
+    <Image src='/logo/logo.png' alt='logo' width={64} height={64} format='webp' class='w-16' />
+    <p class='uppercase text-3xl'>logo</p>
+  </a>
+  <nav class='flex gap-x-4'>
+    <a href='/'>Home</a>
+    <a href='/about'>About</a>
+    <a href='/contact'>Contact</a>
+    <a href='/blog'>Blog</a>
+  </nav>
+</header>
