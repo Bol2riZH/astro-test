@@ -9,7 +9,7 @@ type Props = {
 };
 
 const { post } = Astro.props;
-const author = await getEntryBySlug('authors', post.data.author);
+const author = await getEntryBySlug('posts', post.data.author);
 ---
 
 <article>
@@ -40,7 +40,7 @@ const author = await getEntryBySlug('authors', post.data.author);
     {
       author ? (
         <a href={`/author/${author.slug}`} class='text-zinc-900 text-2xl font-bold'>
-          {author.data.name}
+          {author}
         </a>
       ) : null
     }
